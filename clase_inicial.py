@@ -1,6 +1,6 @@
 
 
-
+# EDICITADO DESE GITHUB
 #! mostrar algo en la consola
 #! int str bool float complex None
 
