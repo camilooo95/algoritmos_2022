@@ -1,6 +1,5 @@
 
 
-# EDICITADO DESE GITHUB
 #! mostrar algo en la consola
 #! int str bool float complex None
 
@@ -74,6 +73,12 @@ def mi_funcion(valor1, valor4, *otros):
 
 
 print(vec)
-mi_funcion(v1, v2, 76, 45, 67 ,89 ,0)
+mi_funcion(v1, v2, 76, 45, 67 , 89 , 0)
 
 print(v1, v2, vec)
+
+
+from mi_modulo import suma
+
+
+print(suma(3, 7))
