@@ -1,4 +1,78 @@
 
+vec = [1, 3, 4, 5, 70, 100] 
+
+def busqueda_secuencial(vector, buscado, indice):
+    if(indice == len(vec)):
+        return -1
+    elif(buscado == vector[indice]):
+        return indice
+    else:
+        return busqueda_secuencial(vector, buscado, indice+1)
+
+def busqueda_secuencial2(vector, buscado):
+    if(len(vector) == 0):
+        return -1
+    elif(buscado == vector[-1]):
+        return len(vector)-1
+    else:
+        return busqueda_secuencial2(vector[:-1], buscado)
+
+print(busqueda_secuencial2(vec, 33))
+
+
+def contar_digitos(numero):
+    if(numero < 10):
+        return 1
+    else:
+        return 1 + contar_digitos(numero//10)
+
+print(contar_digitos(7845))
+
+
+cadena = 'hola'
+
+def invertir_cadena(cadena, indice):
+    if(indice == 1):
+        return cadena[indice-1]
+    else:
+        return cadena[indice-1] + invertir_cadena(cadena, indice-1)
+
+def invertir_cadena2(cadena):
+    if(len(cadena) == 0):
+        return cadena
+    else:
+        return cadena[-1] + invertir_cadena2(cadena[:-1])
+
+# print(invertir_cadena2(cadena))
+
+def sumatoria(numero):
+    if(numero == 1):
+        return numero
+    else:
+        return 1/numero + sumatoria(numero-1)
+
+print(sumatoria(3))
+
+def suma(num):
+    if(num == 0):
+        return num
+    else:
+        return num + suma(num-1)
+
+
+# print(suma(5))
+
+
+# 2^3 = 2 * 2 * 2
+
+def potencia(base, exponente):
+    if(exponente == 0):
+        return 1
+    else:
+        return base * potencia(base, exponente-1)
+
+
+# print(potencia(2,5))
 
 def factorial_iterativa(num):
     factorial = 1
@@ -39,9 +113,9 @@ def fib_rec(num):
 # print(factorial_iterativa(5))
 
 
-for i in range(2, 11):
-    print('fibanacci ', i, fib_rec(i))
+# for i in range(2, 11):
+#     print('fibanacci ', i, fib_rec(i))
 
 
 
-
+#! 2 4 6 7 10 20 
