@@ -1,6 +1,20 @@
 
 vec = [1, 3, 4, 5, 70, 100] 
 
+def bbinaria(vector, buscado, primero, ultimo):
+    medio = (primero + ultimo) // 2
+    if(primero > ultimo):
+        return -1
+    elif(buscado == vector[medio]):
+        return medio
+    elif(vector[medio] < buscado):
+        return bbinaria(vector, buscado, medio+1, ultimo)
+    else:
+        return bbinaria(vector, buscado, primero, medio-1)
+
+
+print('posicion', bbinaria(vec, 11, 0, len(vec)-1))
+
 def busqueda_secuencial(vector, buscado, indice):
     if(indice == len(vec)):
         return -1
@@ -119,3 +133,17 @@ def fib_rec(num):
 
 
 #! 2 4 6 7 10 20 
+
+
+matriz = [
+    [1, 2, 3], 
+    [4, 5, 6], 
+    [6, 7, 8],
+    ]
+
+for i in range(len(matriz)):
+    for j in range(len(matriz[i])):
+        print(matriz[i][j])
+
+# for i in range(len(matriz)):
+#     print(matriz[i])
