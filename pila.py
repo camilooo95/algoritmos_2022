@@ -32,20 +32,20 @@ class Pila():
     def pila_vacia(self):
         return self.__cima is None
 
-# from random import randint
+from random import randint
 
-# pila1 = Pila()
-# print(pila1.pila_vacia())
+pila1 = Pila()
+print(pila1.pila_vacia())
 
-# for i in range(10):
-#     num = randint(0, 100)
-#     print('numero generado', num)
-#     pila1.apilar(num)
+for i in range(10):
+    num = randint(0, 100)
+    print('numero generado', num)
+    pila1.apilar(num)
 
-# print(pila1.tamanio())
+print(pila1.tamanio())
 
-# while(not pila1.pila_vacia()):
-#     dato = pila1.desapilar()
-#     print('elemento desapilado', dato)
+while(not pila1.pila_vacia()):
+    dato = pila1.desapilar()
+    print('elemento desapilado', dato)
 
-# print(pila1.pila_vacia())
+print(pila1.pila_vacia())
